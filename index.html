@@ -152,36 +152,36 @@
                 </li>
                 <li>
                   <a
-                    href="how-to-help.html?donate=true"
+                    href="how-to-help.html"
                     >How to Help</a
                   >
                 </li>
                 <li>
                   <a
-                    href="about.html?donate=true"
+                    href="about.html"
                     >About Us</a
                   >
                 </li>
                 <li>
                   <a
-                    href="blog.html?donate=true"
+                    href="blog.html"
                     >Blog</a
                   >
                 </li>
                 <li>
                   <a
-                    href="contact.html?donate=true"
+                    href="contact.html"
                     >Contact</a
                   >
                 </li>
                 <li>
                   <a
-                    href="testimonials.html?donate=true"
+                    href="testimonials.html"
                     >Testimonials</a
                   >
                 </li>
                 <li>
-                  <a href="faq.html?donate=true"
+                  <a href="faq.html"
                     >FAQ</a
                   >
                 </li>
@@ -775,17 +775,6 @@
     <script src="./public/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Check if opened with donate=true parameter
-        var urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('donate') === 'true') {
-          var modal = document.getElementById('modal-doacao');
-          if (modal) {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            setTimeout(function() { modal.classList.add('active'); }, 10);
-          }
-        }
-
         // Show thank-you modal if returning from successful Paystack payment
         (function() {
           var urlParams = new URLSearchParams(window.location.search);
