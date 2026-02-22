@@ -262,6 +262,13 @@ app.get('/setup-telegram-webhook', async (req, res) => {
     }
 });
 
+// Test Telegram bot - sends a test message
+app.get('/test-telegram', async (req, res) => {
+    const testMessage = `🧪 <b>Test Message</b>\n\nTelegram bot is working!\n\nWhen a donation is received, you'll get a notification here with APPROVE/REJECT buttons.`;
+    await sendTelegramNotification(testMessage, 'test_123');
+    res.json({ success: true, message: 'Test message sent!' });
+});
+
 // Test endpoint to check static files
 app.get('/test-files', (req, res) => {
     const publicPath = path.join(__dirname, '..', 'public');
