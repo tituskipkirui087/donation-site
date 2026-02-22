@@ -2,14 +2,14 @@ services:
   - type: web
     name: imani-childrens-home
     env: php
-    buildCommand: >
-      echo "No build command needed for PHP"
+    buildCommand: ""
     startCommand: php -S 0.0.0.0:$PORT -t .
+    rootDirectory: ""
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 10000
+        value: "10000"
       - key: PAYSTACK_SECRET_KEY
         sync: false
       - key: PAYSTACK_PUBLIC_KEY
