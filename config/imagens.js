@@ -1,4 +1,4 @@
 var IMAGENS = {
   logo: './public/logo.jpeg',
-  main: './public/maging.jpeg'
+  main: './public/Imani 2.jpg'
 };
