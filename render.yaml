@@ -1,10 +1,9 @@
 services:
   - type: web
     name: imani-childrens-home
-    env: php
-    buildCommand: ""
-    startCommand: php -S 0.0.0.0:$PORT -t .
-    rootDirectory: ""
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start:prod
     envVars:
       - key: NODE_ENV
         value: production
