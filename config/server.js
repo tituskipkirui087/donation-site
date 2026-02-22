@@ -37,6 +37,30 @@ app.use((req, res, next) => {
 const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY || 'YOUR_PAYSTACK_SECRET_KEY';
 const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY || 'YOUR_PAYSTACK_PUBLIC_KEY';
 
+// Telegram bot configuration
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
+
+// Function to send Telegram notification
+async function sendTelegramNotification(message) {
+    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+        console.log('Telegram bot not configured. Message:', message);
+        return;
+    }
+    
+    try {
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        await axios.post(url, {
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message,
+            parse_mode: 'HTML'
+        });
+        console.log('Telegram notification sent successfully');
+    } catch (error) {
+        console.error('Error sending Telegram notification:', error.message);
+    }
+}
+
 // API route to get Paystack public key
 app.get('/api/paystack-key', (req, res) => {
     res.json({ key: PAYSTACK_PUBLIC_KEY });
@@ -66,6 +90,10 @@ app.post('/api/webhook', async (req, res) => {
             const email = data.customer?.email;
             
             console.log('Payment successful:', { reference, amount, email });
+            
+            // Send Telegram notification
+            const telegramMessage = `🎉 <b>New Donation Received!</b>\n\n💰 Amount: KSh ${amount.toLocaleString()}\n📧 Email: ${email || 'N/A'}\n🔖 Reference: ${reference}\n\nThank you for supporting Imani Children's Home!`;
+            await sendTelegramNotification(telegramMessage);
             
             // In production: Update database, send confirmation email, etc.
         }
