@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 10000;
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use('/config', express.static(path.join(__dirname, '..', 'config')));
+app.use(express.static(process.cwd() + '/public'));
+app.use('/config', express.static(process.cwd() + '/config'));
 
 // CORS headers
 app.use((req, res, next) => {
