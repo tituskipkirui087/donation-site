@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gaza Donation</title>
+    <link rel="stylesheet" href="./public/styles.css">
+    <style>
+        .page-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
+        }
+        .page-header h1 {
+            color: #2563eb;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .page-content {
+            line-height: 1.8;
+            color: #374151;
+        }
+        .contact-info {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .contact-info strong {
+            color: #2563eb;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #374151;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #2563eb;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .donate-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .donate-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+        
+        <div class="page-content">
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> info@gazadonations.org</p>
+                <p><strong>📞 Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>🌐 Website:</strong> www.gazadonations.org</p>
+                <p><strong>📍 Location:</strong> Supporting Gaza from around the world</p>
+            </div>
+
+            <h2>Send us a Message</h2>
+            <form class="contact-form" action="mailto:info@gazadonations.org" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <h2>Other Ways to Help</h2>
+            <ul>
+                <li>Partner with us as a corporate sponsor</li>
+                <li>Organize a fundraising event in your community</li>
+                <li>Volunteer your professional skills</li>
+                <li>Spread the word on social media</li>
+            </ul>
+
+            <a href="index.html" class="donate-btn">Donate Now</a>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
