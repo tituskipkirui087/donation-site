@@ -1,19 +1,54 @@
-# Gaza Donation Regime — Static Frontend
+# Imani Childrens Home — Donation Website
 
-This workspace contains a static HTML/CSS/JS frontend scaffold plus simple API stubs for local testing.
+This is the official donation website for Imani Children\'s Home / Children First Kenya.
 
-Quick start:
+## Features
+- Online donations via Paystack (MPesa, Card, Bank)
+- Real-time donation notifications
+- Supporters comments section
+- Responsive design for all devices
 
-1. Serve the folder with a static server (Python):
+## Quick Start (Local Development)
 
+1. Install dependencies:
 ```bash
-# from the project root
-python -m http.server 8000
+npm install
 ```
 
-2. Open http://localhost:8000/index.html in your browser.
+2. Start the server:
+```bash
+npm start
+```
 
-Notes:
-- `public/` contains CSS, JS and placeholder images.
-- `config/` contains example data used by `render.js`.
-- `api/` contains simple PHP stubs — to test these you need a PHP-enabled server (e.g. `php -S localhost:8000`).
+3. Open http://localhost:3000 in your browser
+
+## Production Deployment
+
+### Required Environment Variables
+Create a `.env` file with:
+```
+PAYSTACK_SECRET_KEY=sk_live_xxxxxxxxxxxxx
+PAYSTACK_PUBLIC_KEY=pk_live_xxxxxxxxxxxxx
+PORT=3000
+NODE_ENV=production
+```
+
+### Paystack Configuration
+1. Get live API keys from Paystack dashboard
+2. Set webhook URL: `https://yourdomain.com/webhook`
+3. Update `.env` with live keys
+
+### Hosting Options
+- **Render.com** - Recommended free Node.js hosting
+- **Railway** - Easy deployment
+- **Heroku** - Classic option
+- **Vercel/Netlify** - With serverless functions
+
+### Deploy to Render
+1. Push code to GitHub
+2. Connect Render to your GitHub repo
+3. Set environment variables in Render dashboard
+4. Deploy!
+
+## License
+ISC

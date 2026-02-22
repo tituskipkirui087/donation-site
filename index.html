@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-      
+       
 <script>
   window.tikTokPixelId = "69939cd815d5098444674513";
   var a = document.createElement("script");
@@ -18,10 +18,10 @@
   async
   defer
 ></script>
-      
+       
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaza Donation</title>
+    <title></title>
     <link rel="shortcut icon" id="favicon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
@@ -103,7 +103,7 @@
         transform: rotate(180deg);
       }
     </style>
-    <script src="https://api.conta.paybeehive.com.br/v1/js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <script>
       let params = {
         src: "",
@@ -158,6 +158,24 @@
                 </li>
                 <li>
                   <a
+                    href="#about-section"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#blog-section"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact-section"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
                     href="#comentarios-secao"
                     >Testimonials</a
                   >
@@ -199,11 +217,11 @@
               <div class="valores-container">
                 <div class="valor-arrecadado">
                   <span class="valor-label">Raised</span>
-                  <span class="valor-numero" id="amount-collected"></span>
+                  <span class="valor-numero" id="amount-collected">KSh 1.2M</span>
                 </div>
                 <div class="valor-meta">
                   <span class="valor-label">Goal</span>
-                  <span class="valor-numero" id=amount-goal></span>
+                  <span class="valor-numero" id="amount-goal">KSh 100M</span>
                 </div>
               </div>
               <div class="barra-progresso-container">
@@ -212,13 +230,13 @@
                     class="barra-progresso-fill"
                     id="progress-bar"
                   >
-                    <span class="porcentagem">6,66%</span>
+                    <span class="porcentagem">6.66%</span>
                   </div>
                 </div>
               </div>
               <div class="apoiadores-info">
                 <span class="apoiadores-label">Supports</span>
-                <span class="apoiadores-numero" id="supporters">753</span>
+                <span class="apoiadores-numero" id="supporters">11K</span>
               </div>
               <a
                 href="#"
@@ -246,8 +264,9 @@
                     <span id="creation-date"></span></span
                   >
 
-                  <p><strong>✅ Verified Story</strong></p>
-
+                  <p><strong> Verified Story✅</strong></p>
+                  <p><strong>Fundraiser created on: 11/12/2025</strong><br><span id="creation-date"></span></p>
+                  <p><strong>Imani Children’s Home, located in Kayole, Nairobi, is a loving and safe haven for abandoned, orphaned, and vulnerable children. Founded in 1992, our mission is to provide a nurturing family environment where every child feels valued, protected, and supported. At Imani, we go beyond providing shelter — we focus on holistic care, ensuring that children have access to quality education, proper healthcare, emotional guidance, and essential life skills. Our programs are designed to empower children to reach their full potential and to help them grow into responsible, confident, and compassionate adults. Through the dedication of our staff, volunteers, and the wider community, Imani Children’s Home transforms the lives of countless children, offering them hope, stability, and the opportunity to build brighter futures. We believe that every child deserves love, care, and the chance to thrive, and we work tirelessly to make that belief a reality every day.  </strong></p>
                   <p id="text-01">
                   </p>
 
@@ -305,12 +324,16 @@
                         </p>
                       </div>
                       <div class="ajuda-botao">
-                        <a
-                          id="share-btn"
-                          class="btn-ajuda btn-compartilhar-grande compartilhar"
-                          target="_blank"
-                          >SHARE</a
-                        >
+                        <div class="share-dropdown" style="position:relative;display:inline-block;">
+                          <button id="share-btn" class="btn-ajuda btn-compartilhar-grande compartilhar" style="cursor:pointer;border:none;font:inherit;">SHARE</button>
+                          <div class="share-options" id="share-options" style="display:none;position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:8px;margin-bottom:8px;min-width:180px;z-index:100;">
+                            <a href="#" id="share-facebook" class="share-option" style="display:flex;align-items:center;gap:10px;padding:10px 12px;color:#1877f2;text-decoration:none;border-radius:8px;transition:background 0.2s;"><i class="fab fa-facebook" style="font-size:18px;"></i> Facebook</a>
+                            <a href="#" id="share-twitter" class="share-option" style="display:flex;align-items:center;gap:10px;padding:10px 12px;color:#1da1f2;text-decoration:none;border-radius:8px;transition:background 0.2s;"><i class="fab fa-twitter" style="font-size:18px;"></i> Twitter</a>
+                            <a href="#" id="share-whatsapp" class="share-option" style="display:flex;align-items:center;gap:10px;padding:10px 12px;color:#25d366;text-decoration:none;border-radius:8px;transition:background 0.2s;"><i class="fab fa-whatsapp" style="font-size:18px;"></i> WhatsApp</a>
+                            <a href="#" id="share-linkedin" class="share-option" style="display:flex;align-items:center;gap:10px;padding:10px 12px;color:#0a66c2;text-decoration:none;border-radius:8px;transition:background 0.2s;"><i class="fab fa-linkedin" style="font-size:18px;"></i> LinkedIn</a>
+                            <a href="#" id="share-copy" class="share-option" style="display:flex;align-items:center;gap:10px;padding:10px 12px;color:#6b7280;text-decoration:none;border-radius:8px;transition:background 0.2s;"><i class="fas fa-link" style="font-size:18px;"></i> Copy Link</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -331,9 +354,9 @@
 
       <section id="comentarios-secao" class="comentarios-secao">
         <div class="container">
-          <h2>Supporters’ Comments</h2>
+          <h2 style="color: #2563eb;">Supporters' Comments</h2>
           <div class="comentarios" id="comments-area">
-            
+             
           </div>
         </div>
       </section>
@@ -351,26 +374,38 @@
         <div class="footer-content">
           <div class="footer-columns">
             <div class="footer-column">
-              <h4 id="footer-title"></h4>
-              <p class="footer-info">
-                <strong></strong> <span id="footer-cnpj"></span>
+              <h4>About Us</h4>
+              <p class="footer-info" style="color:rgba(255,255,255,0.7);line-height:1.6;">
+                At Children First Kenya, our top priority is to make education accessible to every child and fight for gender equality.
               </p>
-              <p class="footer-info" id="footer-address"></p>
+              <a href="#about-section" class="more-about-link" style="color:#fff;text-decoration:underline;display:inline-block;margin-top:8px;">More About Us</a>
+            </div>
+            <div class="footer-column">
+              <h4>Get In Touch</h4>
+              <p class="footer-info" style="color:rgba(255,255,255,0.7);">
+                <a href="mailto:info@childrenfirst.uk" style="color:rgba(255,255,255,0.7);text-decoration:none;">info@childrenfirst.uk</a><br>
+                <a href="tel:+447939576727" style="color:rgba(255,255,255,0.7);text-decoration:none;">+44 7939 576 727</a>
+              </p>
+            </div>
+            <div class="footer-column">
               <div class="social-icons">
                 <a
                   title="Facebook"
                   id="footer-facebook"
-                  ><i class="fab fa-facebook"></i
+                  href="#"
+                  ><img src="./public/facebook icon.jpg" alt="Facebook" class="social-icon-img"
                 ></a>
                 <a
-                  title="Instagram"
-                  id="footer-instagram"
-                  ><i class="fab fa-instagram"></i
+                  title="Twitter"
+                  id="footer-twitter"
+                  href="#"
+                  ><img src="./public/twitter icon.jpg" alt="Twitter" class="social-icon-img"
                 ></a>
                 <a
-                  title="WhatsApp"
-                  id="footer-whatsapp"
-                  ><i class="fab fa-whatsapp"></i
+                  title="TikTok"
+                  id="footer-tiktok"
+                  href="#"
+                  ><img src="./public/tiktok icon.jpg" alt="TikTok" class="social-icon-img"
                 ></a>
               </div>
             </div>
@@ -378,7 +413,7 @@
           <div class="footer-bottom">
             <p id="all-rights-reserved"></p>
             <p class="footer-certificacao">
-              
+               
             </p>
           </div>
         </div>
@@ -399,74 +434,64 @@
       <div class="modal-content">
         <span class="close-modal">×</span>
         <div class="select-amount">
-          <h2 id="donate-modal-title"></h2>
+          <h2 id="donate-modal-title" style="color: #2563eb;"></h2>
           <p id="donate-modal-sub-title" class="modal-subtitulo"></p>
-          <div class="valores-doacao" id="prices-area">
-          </div>
-          <div class="valor-item-grande" id="highest-price"></div>
-          <div class="modal-footer">
-            <div class="metodos-pagamento">
-              <img src="public/visa.svg" />
-              <img src="public/mastercard.svg" />
-              <img src="public/amex.svg" />
-              <img src="public/discover.svg" />
-              <img src="public/elo.svg" />
-              <img src="public/union.svg" />
-              <img src="public/diners.svg" />
-              <img src="public/jcb.svg" />
-            </div>
-          </div>
-        </div>
-        <div class="select-payment hidden">
-          <h2>Payment Method</h2>
-          <p class="modal-subtitulo">All transactions are secure and encrypted.</p>
-          <div>
-            <label class="label-method">
-              <div style="display: flex; justify-content: center; align-items: center; gap: 4px;">
-                <input type="radio" name="method" data-name="card" class="input-radio">
-                Credit Card
-              </div>
-              <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="public/visa.svg" alt="credit card icon">
-                <img src="public/mastercard.svg" alt="credit card icon">
-                <img src="public/amex.svg" alt="credit card icon">
-                <img src="public/elo.svg" alt="credit card icon">
-              </div>
-            </label>
-            <div id="form-cartao" class="hidden" style="margin-top: 16px;">
-              <div class="row">
-                <label for="cc_numero">Card number</label>
-                <input type="text" name="cc_numero" id="cc_numero" placeholder="0000 0000 0000 0000">
-                <div class="error-text" style="display:none"></div>
-              </div>
-              <div class="row">
-                <label for="cc_titular">Name on card</label>
-                <input type="text" name="cc_titular" id="cc_titular" placeholder="John Doe">
-                <div class="error-text" style="display:none"></div>
-              </div>
-              <!-- <div class="row">
-                <label for="cc_cpf_titular">CPF do Titular</label>
-                <input type="text" name="cc_cpf_titular" id="cc_cpf_titular" placeholder="000.000.000-00">
-              </div> -->
-              <div class="input-flex">
-                <div class="row">
-                  <label for="cc_validade">Expiration Date</label>
-                  <input class="input-form" type="text" name="cc_validade" id="cc_validade" placeholder="MM/YY">
-                  <div class="error-text" style="display:none"></div>
-                </div>
-                <div class="row">
-                  <label for="cc_cvv">Security Code</label>
-                  <input class="input-form" type="text" name="cc_cvv" id="cc_cvv" placeholder="123" maxlength="3">
-                  <div class="error-text" style="display:none"></div>
-                </div>
-              </div>
-              <div>
-                <button class="btn-donate">Donate Now <span style="margin-left: 8px;" class="amount-selected"></span></button>
-                <div style="display: flex; align-items: center; justify-content: center; margin-top: 8px;">
-                  <button class="btn-another-value" style="background: none; border: none; color: #143eee; font-size: 14px; cursor: pointer; font-weight: 500; font-family: 'Poppins', sans-serif;">Select another value</button>
-                </div>
-              </div>
+          <p class="modal-click-hint" style="font-size:13px;color:#6b7280;margin-bottom:8px;">👆 Enter your email, select your country, then click an amount to donate instantly via Paystack</p>
 
+          <!-- Donor email input -->
+          <div class="donor-email-wrap" style="margin-bottom:14px;">
+            <input
+              type="email"
+              id="donor-email-input"
+              placeholder="Enter your email address"
+              autocomplete="email"
+              style="width:100%;padding:10px 14px;border:1.5px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;"
+            />
+            <p id="donor-email-error" style="color:#e74c3c;font-size:12px;margin:4px 0 0;display:none;">Please enter a valid email address.</p>
+          </div>
+
+          <!-- Country selector for Paystack Africa -->
+          <div class="donor-country-wrap" style="margin-bottom:14px;display:none;">
+            <select id="donor-country-input" style="width:100%;padding:10px 14px;border:1.5px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;background:#fff;cursor:pointer;">
+              <option value="KE" selected>Kenya</option>
+            </select>
+            <p id="donor-country-error" style="color:#e74c3c;font-size:12px;margin:4px 0 0;display:none;">Please select your country.</p>
+          </div>
+
+          <div class="valores-doacao" id="prices-area">
+            <button class="valor-item valor-btn" data-amount="1600" type="button">KSh 1,600</button>
+            <button class="valor-item valor-btn" data-amount="2500" type="button">KSh 2,500 <span class="badge-popular">Popular</span></button>
+            <button class="valor-item valor-btn" data-amount="5000" type="button">KSh 5,000</button>
+            <button class="valor-item valor-btn" data-amount="7500" type="button">KSh 7,500</button>
+            <button class="valor-item valor-btn" data-amount="10000" type="button">KSh 10,000</button>
+            <button class="valor-item valor-btn" data-amount="15000" type="button">KSh 15,000</button>
+            <button class="valor-item valor-btn" data-amount="20000" type="button">KSh 20,000</button>
+            <button class="valor-item valor-btn" data-amount="25000" type="button">KSh 25,000</button>
+          </div>
+          <!-- Custom amount input that auto-fills when amount is selected -->
+          <div class="custom-amount-wrap" style="margin: 16px 0;">
+            <input
+              type="number"
+              id="custom-amount-input"
+              placeholder="Or enter custom amount (KSh)"
+              min="1600"
+              style="width:100%;padding:12px 14px;border:2px solid #d1d5db;border-radius:8px;font-size:16px;outline:none;box-sizing:border-box;text-align:center;font-weight:bold;"
+            />
+            <p id="custom-amount-error" style="color:#e74c3c;font-size:12px;margin:4px 0 0;display:none;">Please enter a valid amount.</p>
+          </div>
+          <div class="valor-item-grande" id="highest-price">
+            <button class="valor-btn" data-amount="50000" type="button" style="background:none;border:none;width:100%;font-size:inherit;font-weight:inherit;color:inherit;cursor:pointer;">
+              💛 KSh 50,000 — Be a Champion for Imani Children
+            </button>
+          </div>
+          <div class="modal-footer">
+            <p style="font-size:12px;color:#9ca3af;text-align:center;margin-bottom:8px;">🔒 Secure payments powered by Paystack</p>
+            <div class="metodos-pagamento paystack-methods">
+              <button type="button" class="pay-method-badge pay-method-btn" data-channel="mobile_money" title="Pay with MPesa">📱 MPesa</button>
+              <button type="button" class="pay-method-badge pay-method-btn" data-channel="mobile_money" title="Pay with Airtel Money">📱 Airtel Money</button>
+              <button type="button" class="pay-method-badge pay-method-btn" data-channel="mobile_money" title="Pay with Tkash">📱 Tkash</button>
+              <button type="button" class="pay-method-badge pay-method-btn" data-channel="card" title="Pay with Card">💳 Card</button>
+              <button type="button" class="pay-method-badge pay-method-btn" data-channel="bank" title="Pay with Bank Transfer">🏦 Bank</button>
             </div>
           </div>
         </div>
@@ -475,284 +500,142 @@
         <h2 class="text-3xl font-bold mb-4">💙 Thank you for your donation!</h2>
 
         <p style="text-align: center; color: #4a5568; font-size: 1rem; line-height: 1.5; margin-bottom: 1.2rem;">
-          Your support is giving Gaza a second chance.
+          Your support is giving Imani Childrens Home a second chance.
         </p>
         <p style="color: #4a5568; font-size: 0.9rem; font-style: italic; margin-bottom: 0; text-align: center;">
-          “You matter, Gaza. Your pain will not be ignored.
+          "You matter, Imani Childrens Home. Your pain will not be ignored.
           <br>
-          Thank you for trusting us.” 🙏
+          Thank you for trusting us." 🙏
         </p>
         <button class="valor-btn valor-btn-grande-2 btn-help-again"
           style="margin-top: 24px; cursor: pointer; font-size: 1.1em; background-color: var(--cor-primaria); border: none; color: #fff;">
           Help again
         </button>
-      </div>  
+      </div>
       </div>
       
     </div>
     <div id="toast-error" class="toast toast-error hidden">
       <span class="toast-icon">⚠️</span>
       <span class="toast-text">
-        Payment failed. Please check your card details or try another card.
+        Payment failed. Please try again or use a different payment method.
       </span>
     </div>
 
     <style>
       .toast {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  animation: slideIn 0.3s ease;
-  z-index: 9999;
-}
-
-.toast-error {
-  background: #e74c3c;
-  color: #fff;
-}
-
-.toast-icon {
-  font-size: 18px;
-}
-
-.hidden {
-  display: none;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-      .input-radio {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  width: 18px;
-  height: 18px;
-  border: 1px solid #143eee;
-  border-radius: 50%;
-  display: inline-grid;
-  place-content: center;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.input-radio::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: transform .15s ease-in-out;
-  background: #fff;
-  border: 6px solid #143eee;
-}
-
-.input-radio:checked::before {
-  transform: scale(1);
-}
-      .label-method {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 16px;
-        margin-top: 8px;
-        border: 1px solid #ccc;
-        padding: 8px;
-        width: 100%;
-        cursor: pointer;
-        border-radius: 10px;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: slideIn 0.3s ease;
+        z-index: 9999;
+      }
+      .toast-error { background: #e74c3c; color: #fff; }
+      .toast-icon  { font-size: 18px; }
+      .hidden      { display: none; }
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
 
-      .label-method img {
-        width: 32px;
-      }
-      .label-method:has(input:checked) {
-        border-color: #143eee; /* verde pix, ajusta se quiser */
-        background: #f2f6ff;
-      }
-      .row {
+      /* Paystack payment method badges */
+      .paystack-methods {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 14px;
-        width: 100%;
-      }
-
-      .row label {
-        color: #3e3e3e;
-      }
-      .row input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #dcdcdc;
-        border-radius: 10px;
-      }
-      .input-flex {
-        display: flex;
-        gap: 10px;
-      }
-      .btn-donate {
-        width: 100%;
-        border: none;
-        border-radius: 24px;
-        font-size: 16px;
-        font-family: 'Poppins', sans-serif;
-        color: #fff;
-        background-color: #143eee;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-weight: 600;
-        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
         justify-content: center;
-        align-items: center;
+        margin-top: 6px;
       }
-      .input-error {
-        border-color: #e63946 !important;
-      }
-
-      .input-error + .error-text {
-        color: #e63946;
+      .pay-method-badge {
+        background: #f0f4ff;
+        border: 1px solid #d0d9ff;
+        color: #143eee;
+        border-radius: 20px;
+        padding: 4px 12px;
         font-size: 12px;
-        margin-top: 4px;
+        font-weight: 600;
+        white-space: nowrap;
       }
-      .btn-spinner {
-        width: 18px;
-        height: 18px;
-        border: 2px solid rgba(255, 255, 255, 0.4);
-        border-top-color: #ffffff;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
+      .pay-method-btn {
+        cursor: pointer;
+        transition: transform 0.15s, box-shadow 0.15s, background 0.15s, color 0.15s;
+        font-family: inherit;
       }
-      .btn-donate:disabled {
-        background-color: #9ca3af; /* cinza elegante (tailwind gray-400) */
-        cursor: not-allowed;
-        opacity: 0.9;
+      .pay-method-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(20,62,238,0.25);
+        background: linear-gradient(90deg, #143eee, #0b2bd6) !important;
+        color: #fff !important;
+        border-color: transparent !important;
+      }
+      .pay-method-btn:active {
+        transform: scale(0.95);
       }
 
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
+      /* Clickable amount cards */
+      .valor-btn {
+        cursor: pointer;
+        transition: transform 0.15s, box-shadow 0.15s, background 0.15s, color 0.15s;
       }
+      .valor-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(20,62,238,0.22);
+        background: linear-gradient(90deg, #143eee, #0b2bd6) !important;
+        color: #fff !important;
+        border-color: transparent !important;
+      }
+      .valor-btn:active { transform: scale(0.97); }
+      .custom-amount-wrap input:focus { border-color: var(--cor-primaria) !important; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+      .custom-amount-wrap input::placeholder { color: #9ca3af; font-weight: normal; }
+      .valor-btn-loading { opacity: 0.7; pointer-events: none; }
     </style>
+
     <script>
-      // util: só números
-      function onlyNumbers(value) {
-        return value.replace(/\D/g, '');
-      }
-      function showError(input, message) {
-        input.classList.add("input-error");
+      /* ── Paystack inline payment – all channels ── */
+      const PAYSTACK_PUBLIC_KEY = "pk_test_7536e5b57abfcdfb906f76ea9f11041fa33dc988";
 
-        const error = input.nextElementSibling;
-        if (error) {
-          error.textContent = message;
-          error.style.display = "block";
-        }
+      // Flag: true while Paystack popup is open — prevents modal backdrop from closing modal
+      var _paystackActive = false;
 
-        input.focus();
-      }
-      function clearError(input) {
-        input.classList.remove("input-error");
-        const error = input.closest(".row").querySelector(".error-text");
-        error.style.display = "none";
-        error.textContent = "";
-      }
-      function showPaymentErrorToast(message = null) {
-        const toast = document.getElementById('toast-error');
-        const text  = toast.querySelector('.toast-text');
+      // Country exchange rates (USD to local currency)
+      const COUNTRY_RATES = {
+        'KE': { currency: 'KES', rate: 160 },
+        'GH': { currency: 'GHS', rate: 12 },
+        'KE': { currency: 'KES', rate: 160 },
+        'ZA': { currency: 'ZAR', rate: 19 },
+        'EG': { currency: 'EGP', rate: 50 },
+        'MA': { currency: 'MAD', rate: 10 },
+        'TZ': { currency: 'TZS', rate: 2500 },
+        'UG': { currency: 'UGX', rate: 3800 },
+        'RW': { currency: 'RWF', rate: 1200 },
+        'SN': { currency: 'XOF', rate: 620 },
+        'CI': { currency: 'XOF', rate: 620 },
+        'CM': { currency: 'XAF', rate: 620 },
+        'ET': { currency: 'ETB', rate: 56 },
+        'ZW': { currency: 'ZWL', rate: 640 },
+        'ZM': { currency: 'ZMW', rate: 26 },
+        'MW': { currency: 'MWK', rate: 1680 },
+        'MZ': { currency: 'MZN', rate: 64 },
+        'BW': { currency: 'BWP', rate: 14 },
+        'SL': { currency: 'SLL', rate: 22000 },
+        'LR': { currency: 'LRD', rate: 190 },
+        'US': { currency: 'USD', rate: 1 },
+        'GB': { currency: 'GBP', rate: 0.79 },
+        'CA': { currency: 'CAD', rate: 1.36 },
+        'AU': { currency: 'AUD', rate: 1.53 },
+        'DE': { currency: 'EUR', rate: 0.92 },
+        'FR': { currency: 'EUR', rate: 0.92 },
+        'OTHER': { currency: 'USD', rate: 1 }
+      };
 
-        if (message) {
-          text.textContent = message;
-        }
-
-        toast.classList.remove('hidden');
-
-        setTimeout(() => {
-          toast.classList.add('hidden');
-        }, 4000);
-      }
-
-
-      const ccNome = document.getElementById('cc_titular');
-
-      // CARTÃO: 0000 0000 0000 0000
-      const ccNumero = document.getElementById('cc_numero');
-      ccNumero.addEventListener('input', () => {
-        let v = onlyNumbers(ccNumero.value).slice(0, 16);
-        ccNumero.value = v.replace(/(\d{4})(?=\d)/g, '$1 ');
-      });
-
-      // CPF: 000.000.000-00
-      // const ccCpf = document.getElementById('cc_cpf_titular');
-      // ccCpf.addEventListener('input', () => {
-      //   let v = onlyNumbers(ccCpf.value).slice(0, 11);
-      //   v = v.replace(/(\d{3})(\d)/, '$1.$2');
-      //   v = v.replace(/(\d{3})(\d)/, '$1.$2');
-      //   v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-      //   ccCpf.value = v;
-      // });
-
-      // VALIDADE: MM/AA
-      const ccValidade = document.getElementById('cc_validade');
-      ccValidade.addEventListener('input', () => {
-        let v = onlyNumbers(ccValidade.value).slice(0, 4);
-
-        if (v.length >= 3) {
-          v = v.replace(/(\d{2})(\d)/, '$1/$2');
-        }
-
-        ccValidade.value = v;
-      });
-
-      // CVV: só números (3 ou 4 se quiser)
-      const ccCvv = document.getElementById('cc_cvv');
-      ccCvv.addEventListener('input', () => {
-        ccCvv.value = onlyNumbers(ccCvv.value).slice(0, 3);
-      });
-
-      function isValidCardNumber(value) {
-        const digits = onlyNumbers(value);
-        return digits.length >= 13 && digits.length <= 16;
-      }
-      function isValidCPF(cpf) {
-        return onlyNumbers(cpf).length === 11;
-      }
-
-      function isValidExpiry(value) {
-        if (!/^\d{2}\/\d{2}$/.test(value)) return false;
-
-        const [mm, yy] = value.split('/').map(Number);
-        if (mm < 1 || mm > 12) return false;
-
-        const now = new Date();
-        const currentYear = now.getFullYear() % 100;
-        const currentMonth = now.getMonth() + 1;
-
-        if (yy < currentYear) return false;
-        if (yy === currentYear && mm < currentMonth) return false;
-
-        return true;
-      }
-
-      function isValidCVV(value) {
-        return onlyNumbers(value).length === 3;
-      }
       function getTrackingData() {
         return JSON.parse(localStorage.getItem('tracking_data')) || {};
       }
@@ -760,186 +643,155 @@
         const match = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
         return match ? match[1] : null;
       }
-
-      async function buildPayload() {
-        const [expMonth, expYear] = ccValidade.value.split('/');
-        const usdAmount = Number(localStorage.getItem("amount-selected"));
-        const EXCHANGE_RATE = 5.10;
-        const brlAmount = Number(usdAmount * EXCHANGE_RATE).toFixed(2);
-        const amountInCents = Math.round(brlAmount * 100);
-        const cardData = {
-            number: onlyNumbers(ccNumero.value),    // número do cartão (sem espaços)
-            holderName: document.getElementById("cc_titular")?.value,      // nome impresso no cartão
-            expMonth: expMonth,                // mês de validade (2 dígitos)
-            expYear: "20" + expYear,               // ano de validade (4 dígitos)
-            cvv: onlyNumbers(ccCvv.value),                    // código de segurança (3-4 dígitos)
-        };  
-        let token
-        try {
-          token = await BeehivePay.encrypt(cardData);
-        } catch (error) {
-          showPaymentErrorToast();
-          restoreDonateButtonText();
-          return;
-        }
-        const client_id = getClientId();
-        const tracking_data = getTrackingData()
-        return {
-          card: {
-            number: onlyNumbers(ccNumero.value),
-            holder_name: document.getElementById("cc_titular")?.value || "",
-            exp_month: expMonth,
-            exp_year: "20" + expYear,
-            cvv: onlyNumbers(ccCvv.value)
-          },
-          hash: token,
-          client_id,
-          tracking_data,
-          amount: Number(brlAmount).toFixed(2)
-        };
-      }
-
-      function setDonateButtonLoading() {
-        if (!btnDonate) return;
-        // salva o texto original
-        btnDonate.dataset.originalText = btnDonate.innerHTML;
-        btnDonate.innerHTML = `
-          <span class="btn-spinner" aria-hidden="true"></span>
-        `;
-        btnDonate.disabled = true;
-        btnDonate.classList.add("is-loading");
+      function showPaymentErrorToast(message) {
+        const toast = document.getElementById('toast-error');
+        const text  = toast.querySelector('.toast-text');
+        if (message) text.textContent = message;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 5000);
       }
 
       /**
-       * Atualiza o texto do botão (remove loading)
-       * @param {number|string} amount
-      */
-      function restoreDonateButtonText() {
-        if (!btnDonate) return;
-
-        const originalHtml = btnDonate.dataset.originalText;
-        console.log({originalHtml});
-        
-        
-        if (originalHtml) {
-          btnDonate.innerHTML = originalHtml;
-        }
-
-        btnDonate.disabled = false;
-        btnDonate.classList.remove("is-loading");
+       * Validate email format.
+       */
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+KSh /.test(email);
       }
 
+      /**
+       * Launch Paystack inline payment with optional channel.
+       * @param {number} usdAmount - The amount in USD
+       * @param {string} channel - Optional payment channel: 'card', 'bank', 'mobile_money', 'ussd', 'qr'
+       */
+      function launchPaystackForAmount(usdAmount, channel) {
+        if (!usdAmount || usdAmount <= 0) {
+          showPaymentErrorToast("Please select a donation amount");
+          return;
+        }
 
-      const btnDonate = document.querySelector(".btn-donate");
+        // Get donor email (or use placeholder if not entered)
+        var emailInput = document.getElementById('donor-email-input');
+        var donorEmail = emailInput ? emailInput.value.trim() : '';
 
+        // Use placeholder email if not provided - Paystack will collect it
+        if (!donorEmail || !isValidEmail(donorEmail)) {
+          donorEmail = 'donor@paystack.com';
+        }
 
+        // Get country (or use default if not selected)
+        var countryInput = document.getElementById('donor-country-input');
+        var donorCountry = countryInput ? countryInput.value : '';
 
-      btnDonate.addEventListener("click", async () => {
-        setDonateButtonLoading();
-        [
-        ccNumero,
-        ccNome,
-        ccValidade,
-        ccCvv,
-      ].forEach(clearError);
+        // Use default country if not provided
+        if (!donorCountry) {
+          donorCountry = 'KE'; // Kenya
+        }
+
+        // Get currency settings for selected country
+        var countrySettings = COUNTRY_RATES[donorCountry] || COUNTRY_RATES['OTHER'];
+        var currency = countrySettings.currency;
+        var exchangeRate = countrySettings.rate;
+
+        // Calculate amount in local currency (cents)
+        var localAmount = usdAmount;
+        if (donorCountry !== 'KE') {
+          localAmount = Math.round(usdAmount * exchangeRate);
+        }
+        var centsAmount = localAmount * 100; // Paystack uses cents
+        var ref           = 'IMANI_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6).toUpperCase();
+
+        // Payment channels based on selected method
+        var paymentChannels = ['card', 'mobile_money', 'bank'];
+        if (channel === 'card') {
+          paymentChannels = ['card'];
+        } else if (channel === 'bank') {
+          paymentChannels = ['bank'];
+        } else if (channel === 'mobile_money') {
+          paymentChannels = ['mobile_money'];
+        } else if (channel === 'ussd') {
+          paymentChannels = ['ussd'];
+        } else if (channel === 'qr') {
+          paymentChannels = ['qr'];
+        }
         
-        const cardNumber = ccNumero.value;
-        const validade = ccValidade.value;
-        const cvv = ccCvv.value;
-
-        if (!isValidCardNumber(cardNumber)) {
-          showError(ccNumero, "Invalid card number");
-          restoreDonateButtonText();
-          return;
-        }
-
-        if (!ccNome.value.trim()) {
-          showError(ccNome, "Enter the name on the card");
-          restoreDonateButtonText();
-          return;
-        }
-
-        if (!isValidExpiry(validade)) {
-          showError(ccValidade, "Invalid expiration date");
-          restoreDonateButtonText();
-          return;
-        }
-
-        if (!isValidCVV(cvv)) {
-          showError(ccCvv, "Invalid Security Code");
-          restoreDonateButtonText();
-          return;
-        }
-
-        // passou tudo ✅
-        const payload = await buildPayload();
-        if(!payload) {
-          showPaymentErrorToast();
-          restoreDonateButtonText();
-          return;
-        }
-        console.log("PAYLOAD:");
-        console.log({payload})
-        const response = await fetch("api/card.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
+        var handler = PaystackPop.setup({
+          key:      PAYSTACK_PUBLIC_KEY,
+          email:    donorEmail,
+          amount:   centsAmount,
+          currency: currency,
+          ref:      ref,
+          label:    'Imani Childrens Home Donation - ' + usdAmount + ' KES',
+          metadata: {
+            custom_fields: [
+              { display_name: "Donor Email", variable_name: "donor_email", value: donorEmail },
+              { display_name: "KES Amount", variable_name: "kes_amount", value: usdAmount }
+            ]
           },
-          body: JSON.stringify(payload)
-        })
-        const data = await response.json();
-        console.log({data});
-        if (data.error || (data.pix.status != "paid" && data.pix.status != "in_analysis")) {
-          showPaymentErrorToast();
-          restoreDonateButtonText();
-          return;
-        }
-        if(data.pix.status == "paid" || data.pix.status == "in_analysis") {
-          restoreDonateButtonText();
-          document.querySelector(".select-payment").classList.add("hidden");
-          document.querySelector(".thanks").classList.remove("hidden");
-          const response2 = await fetch("api/webhook.php", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              data: data.pix
+          callback: function(response) {
+            // Payment received - verify on server
+            fetch('/verify', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                reference: response.reference,
+                amount: usdAmount,
+                email: donorEmail
+              })
             })
-          })
-          const data2 = await response2.json();
-          console.log({data2})
-        }
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+              if (data.success || data.status === 'success') {
+                // Show thank-you screen
+                var modal = document.getElementById('modal-doacao');
+                modal.querySelector('.select-amount').classList.add('hidden');
+                modal.querySelector('.thanks').classList.remove('hidden');
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                setTimeout(function() { modal.classList.add('active'); }, 10);
+              } else {
+                showPaymentErrorToast(data.message || "Payment verification failed");
+              }
+            })
+            .catch(function(err) {
+              console.error('Verification error:', err);
+              showPaymentErrorToast("Could not verify payment");
+            });
+          },
+          onClose: function() {
+            // Reopen modal if closed without paying
+            var modal = document.getElementById('modal-doacao');
+            if (modal) {
+              modal.style.display = 'block';
+              document.body.style.overflow = 'hidden';
+              setTimeout(function() { modal.classList.add('active'); }, 10);
+            }
+          }
+        });
 
-        
-      });
-    </script>
-    <script>
-      const radios = document.querySelectorAll('input[name="method"]');
-      const formCartao = document.getElementById('form-cartao');
-      
-      function toggleForm() {
-        const amountSpan = document.querySelector(".amount-selected")
-        const selected = document.querySelector('input[name="method"]:checked');
-        const method = selected?.dataset?.name;
-        formCartao.classList.toggle('hidden', method !== 'card');
-        localStorage.setItem("metodo-pagamento-delivery", method)
-        const amountSelected = localStorage.getItem("amount-selected")
-        amountSpan.innerText = `$${Number(amountSelected).toFixed(2)}`
+        handler.openIframe();
       }
-
-      radios.forEach(radio => {
-        radio.addEventListener('change', toggleForm);
-      });
-
-      // garante estado inicial correto
-      toggleForm();
     </script>
     <script src="./public/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        BeehivePay.setPublicKey("pk_live_v2MnbQOXNhPc2xBaczTx0hBaCsBvqGGm27");// chave publica beehive
-        BeehivePay.setTestMode(false); // use false em produção
+        // Show thank-you modal if returning from successful Paystack payment
+        (function() {
+          var urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.get('payment') === 'success') {
+            var returnModal = document.getElementById('modal-doacao');
+            if (returnModal) {
+              var sel = returnModal.querySelector('.select-amount');
+              var thx = returnModal.querySelector('.thanks');
+              if (sel) sel.classList.add('hidden');
+              if (thx) thx.classList.remove('hidden');
+              returnModal.style.display = 'block';
+              document.body.style.overflow = 'hidden';
+              setTimeout(function() { returnModal.classList.add('active'); }, 10);
+            }
+            window.history.replaceState({}, document.title, window.location.pathname);
+          }
+        })();
+
         // Barras de progresso
         const barrasProgresso = document.querySelectorAll(
           ".barra-progresso-fill"
@@ -955,100 +807,120 @@
           ".btn-doar, .btn-doar-fixed, .btn-doar-lateral"
         );
         const closeModal = document.querySelector(".close-modal");
-        const selectAmountContainer = document.querySelector(".select-amount")
-        const selectPaymentContainer = document.querySelector(".select-payment")
-        const inputRadio = document.querySelector(".input-radio")
-        const formCartao = document.getElementById('form-cartao');
-        const btnAnotherValue = document.querySelector(".btn-another-value");
-        const btnHelpAgain = document.querySelector(".btn-help-again")
-        const thanksContainer = document.querySelector(".thanks")
-        
-        btnHelpAgain.addEventListener("click", () => {
-          selectAmountContainer.classList.remove("hidden");
-          selectPaymentContainer.classList.add("hidden");
-          thanksContainer.classList.add("hidden");
-          formCartao.classList.add("hidden");
-          inputRadio.checked = false;
-        })
+        const selectAmountContainer = document.querySelector(".select-amount");
+        const thanksContainer = document.querySelector(".thanks");
 
-        btnAnotherValue.addEventListener("click", () => {
+        // "Help again" resets to amount selection
+        const btnHelpAgain = document.querySelector(".btn-help-again");
+        if (btnHelpAgain) {
+          btnHelpAgain.addEventListener("click", () => {
+            selectAmountContainer.classList.remove("hidden");
+            thanksContainer.classList.add("hidden");
+          });
+        }
+
+        function openModal() {
           selectAmountContainer.classList.remove("hidden");
-          selectPaymentContainer.classList.add("hidden");
           thanksContainer.classList.add("hidden");
-          formCartao.classList.add("hidden");
-          inputRadio.checked = false;
-        })
+          modal.style.display = "block";
+          document.body.style.overflow = "hidden";
+          setTimeout(() => modal.classList.add("active"), 10);
+        }
+
+        function closeModalFn() {
+          modal.classList.remove("active");
+          setTimeout(() => {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+            selectAmountContainer.classList.remove("hidden");
+            thanksContainer.classList.add("hidden");
+          }, 300);
+        }
 
         // Abrir modal
         botoesDoar.forEach((botao) => {
           botao.addEventListener("click", function (e) {
             e.preventDefault();
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-            setTimeout(() => {
-              modal.classList.add("active");     
-            }, 10);
+            openModal();
           });
         });
-        
 
         // Fechar modal
         if (closeModal) {
-          closeModal.addEventListener("click", function () {
-            modal.classList.remove("active");
-            setTimeout(() => {
-              modal.style.display = "none";
-              document.body.style.overflow = "auto";
-              selectAmountContainer.classList.remove("hidden");
-              selectPaymentContainer.classList.add("hidden");
-              formCartao.classList.add("hidden");
-              thanksContainer.classList.add("hidden");
-              inputRadio.checked = false;
-            }, 300);
-          });
+          closeModal.addEventListener("click", closeModalFn);
         }
 
-        var css_notificaoes_personalizadas = document.createElement('script');
-
-        // Fechar modal ao clicar fora
+        // Fechar modal ao clicar fora (but not when Paystack is active)
         window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            modal.classList.remove("active");
-            setTimeout(() => {
-              modal.style.display = "none";
-              document.body.style.overflow = "auto";
-              selectAmountContainer.classList.remove("hidden")
-              selectPaymentContainer.classList.add("hidden")
-              formCartao.classList.add("hidden")
-              thanksContainer.classList.add("hidden")
-              inputRadio.checked = false;
-            }, 300);
-          }
+          if (e.target === modal && !_paystackActive) closeModalFn();
         });
 
         // Fechar modal com ESC
         document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && modal.classList.contains("active")) {
-            modal.classList.remove("active");
-            setTimeout(() => {
-              modal.style.display = "none";
-              document.body.style.overflow = "auto";
-              selectAmountContainer.classList.remove("hidden")
-              selectPaymentContainer.classList.add("hidden")
-              formCartao.classList.add("hidden")
-              thanksContainer.classList.add("hidden")
-              inputRadio.checked = false;
-            }, 300);
+          if (e.key === "Escape" && modal.classList.contains("active")) closeModalFn();
+        });
+
+        // Wire up amount buttons to launch Paystack directly
+        document.addEventListener("click", function(e) {
+          const btn = e.target.closest(".valor-btn[data-amount]");
+          if (!btn) return;
+          e.stopPropagation(); // prevent modal-close handler from firing
+          const amount = parseFloat(btn.getAttribute("data-amount"));
+          
+          // Auto-fill the custom amount input with selected amount
+          const customAmountInput = document.getElementById("custom-amount-input");
+          if (customAmountInput) {
+            customAmountInput.value = amount;
+            // Also update the champion button text to show selected amount
+            const championBtn = document.querySelector("#highest-price .valor-btn");
+            if (championBtn) {
+              championBtn.innerHTML = "💛 KSh " + amount.toLocaleString() + " — Be a Champion for Imani Children";
+              championBtn.setAttribute("data-amount", amount);
+            }
+          }
+          
+          if (amount && amount > 0) {
+            localStorage.setItem("amount-selected", amount);
+            launchPaystackForAmount(amount);
           }
         });
 
-        // importação do css segundo a documentação do site
-        css_notificaoes_personalizadas.src = __get__(['WVVoU0','1HTklUVF','pNZVRsMlpFZHN','kR0ZZY0doYVJ6bD','VURzVPY0dSSF','ZYWmlSemxvV','2tF', 'OVBR','PT0='].join(''));
+        // Handle custom amount input - also launch payment when user enters amount and presses Enter
+        document.addEventListener("keydown", function(e) {
+          const customAmountInput = document.getElementById("custom-amount-input");
+          if (!customAmountInput) return;
+          
+          if (e.key === "Enter" && document.activeElement === customAmountInput) {
+            e.preventDefault();
+            const amount = parseFloat(customAmountInput.value);
+            if (amount && amount > 0) {
+              localStorage.setItem("amount-selected", amount);
+              // Also update the champion button text to show entered amount
+              const championBtn = document.querySelector("#highest-price .valor-btn");
+              if (championBtn) {
+                championBtn.innerHTML = "💛 KSh " + amount.toLocaleString() + " — Be a Champion for Imani Children";
+                championBtn.setAttribute("data-amount", amount);
+              }
+              launchPaystackForAmount(amount);
+            }
+          }
+        });
+
+        // Update champion button as user types custom amount
+        document.addEventListener("input", function(e) {
+          if (e.target.id === "custom-amount-input") {
+            const amount = parseFloat(e.target.value);
+            const championBtn = document.querySelector("#highest-price .valor-btn");
+            if (championBtn && amount && amount > 0) {
+              championBtn.innerHTML = "💛 KSh " + amount.toLocaleString() + " — Be a Champion for Imani Children";
+              championBtn.setAttribute("data-amount", amount);
+            }
+          }
+        });
 
         // Botões de toggle para as respostas dos comentários
         const toggleButtons = document.querySelectorAll(".toggle-btn");
         toggleButtons.forEach(function (button) {
-          // Guardar o texto original do botão para restaurar depois
           const textoOriginal = button.innerHTML;
           let isExpanded = false;
 
@@ -1059,37 +931,27 @@
             );
             const loader = this.nextElementSibling;
 
-            // Mostrar loader
             loader.style.display = "inline-block";
 
-            // Simular carregamento e então mostrar/esconder respostas
             setTimeout(() => {
-              // Esconder loader
               loader.style.display = "none";
 
-              // Alternar estado
               isExpanded = !isExpanded;
 
               if (isExpanded) {
-                // Mostrar respostas com animação
                 respostasConteudo.style.display = "block";
-                // Pequeno delay para garantir que a transição funcione
                 setTimeout(() => {
                   respostasConteudo.classList.add("visible");
                 }, 10);
 
-                // Mudar texto do botão
                 this.innerHTML = `—&nbsp;&nbsp;Hide Replies`;
               } else {
-                // Remover classe de visibilidade
                 respostasConteudo.classList.remove("visible");
 
-                // Esconder respostas após a animação
                 setTimeout(() => {
                   respostasConteudo.style.display = "none";
                 }, 300);
 
-                // Restaurar texto original
                 this.innerHTML = textoOriginal;
               }
             }, 700);
@@ -1102,14 +964,11 @@
 
         tabLinks.forEach(function (tab) {
           tab.addEventListener("click", function () {
-            // Remover classe active de todas as abas
             tabLinks.forEach((t) => t.classList.remove("active"));
             tabContents.forEach((c) => c.classList.remove("active"));
 
-            // Adicionar classe active na aba clicada
             this.classList.add("active");
 
-            // Mostrar o conteúdo correspondente
             const tabId = this.getAttribute("data-tab");
             document.getElementById(tabId).classList.add("active");
           });
@@ -1117,19 +976,12 @@
 
         // Integrar botões de Como Ajudar
         const btnDoeAgora = document.querySelector(".doe-agora");
-
         if (btnDoeAgora) {
           btnDoeAgora.addEventListener("click", function (e) {
             e.preventDefault();
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-            setTimeout(() => {
-              modal.classList.add("active");
-            }, 10);
+            openModal();
           });
         }
-
-        // O botão compartilhar agora redireciona diretamente para o WhatsApp
 
         // Menu mobile toggle
         const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
@@ -1162,11 +1014,7 @@
         if (btnHeaderDoar) {
           btnHeaderDoar.addEventListener("click", function (e) {
             e.preventDefault();
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-            setTimeout(() => {
-              modal.classList.add("active");
-            }, 10);
+            openModal();
           });
         }
 
@@ -1177,20 +1025,86 @@
           const question = item.querySelector(".faq-question");
 
           question.addEventListener("click", () => {
-            // Verifica se o item clicado já está ativo
             const isActive = item.classList.contains("active");
 
-            // Fecha todos os itens
             faqItems.forEach((faqItem) => {
               faqItem.classList.remove("active");
             });
 
-            // Se o item clicado não estava ativo, ativa-o
             if (!isActive) {
               item.classList.add("active");
             }
           });
         });
+      });
+
+      // Share button functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        var shareBtn = document.getElementById('share-btn');
+        var shareOptions = document.getElementById('share-options');
+        
+        // Toggle share dropdown
+        if (shareBtn && shareOptions) {
+          shareBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            shareOptions.style.display = shareOptions.style.display === 'none' ? 'block' : 'none';
+          });
+          
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!shareBtn.contains(e.target) && !shareOptions.contains(e.target)) {
+              shareOptions.style.display = 'none';
+            }
+          });
+        }
+        
+        // Get current page URL and title
+        var shareUrl = encodeURIComponent(window.location.href);
+        var shareTitle = encodeURIComponent('Support Imani Childrens Home Emergency Relief - Your Donation Makes a Difference');
+        
+        // Facebook share
+        var facebookBtn = document.getElementById('share-facebook');
+        if (facebookBtn) {
+          facebookBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '&quote=' + shareTitle;
+          facebookBtn.target = '_blank';
+        }
+        
+        // Twitter share
+        var twitterBtn = document.getElementById('share-twitter');
+        if (twitterBtn) {
+          twitterBtn.href = 'https://twitter.com/intent/tweet?url=' + shareUrl + '&text=' + shareTitle;
+          twitterBtn.target = '_blank';
+        }
+        
+        // WhatsApp share
+        var whatsappBtn = document.getElementById('share-whatsapp');
+        if (whatsappBtn) {
+          whatsappBtn.href = 'https://wa.me/?text=' + shareTitle + ' ' + shareUrl;
+          whatsappBtn.target = '_blank';
+        }
+        
+        // LinkedIn share
+        var linkedinBtn = document.getElementById('share-linkedin');
+        if (linkedinBtn) {
+          linkedinBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+          linkedinBtn.target = '_blank';
+        }
+        
+        // Copy link
+        var copyBtn = document.getElementById('share-copy');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            navigator.clipboard.writeText(window.location.href).then(function() {
+              alert('Link copied to clipboard!');
+              shareOptions.style.display = 'none';
+            }).catch(function(err) {
+              console.error('Failed to copy: ', err);
+            });
+          });
+        }
       });
 
       // Desabilitar menu de contexto (opcional)
@@ -1208,42 +1122,13 @@
     <script src="./config/notificaoes.js"></script>
     <script src="./config/comentarios.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-
-
-function chooseRandomMessage() {
-			const randomInex = Math.floor(Math.random() * NOTIFICACOES.length);
-			return NOTIFICACOES[randomInex];
-		}
-		function showNotifications(text) {
-			if (!Swal.isVisible()) {
-              const Toast = Swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                  toast.onmouseenter = Swal.stopTimer;
-                  toast.onmouseleave = Swal.resumeTimer;
-                }
-              });
-
-            Toast.fire({
-              icon: "success",
-              title: text
-            });
-			}
-		}
-
-		setInterval(() => {
-			const randomText = chooseRandomMessage();
-			showNotifications(randomText);
-		}, INTERVALO_ENTRE_NOTIFICACOES * 1000);
-    </script>
+    <!-- Notification popup container -->
+    <div id="notifications-container"></div>
 
     <script src="./public/render.js"></script>
 
   </body>
 </html>
+
+
+
