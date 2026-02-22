@@ -19,6 +19,7 @@ console.log('Public exists:', fs.existsSync(publicPath));
 console.log('Config exists:', fs.existsSync(configPath));
 
 app.use(express.static(publicPath));
+app.use('/public', express.static(publicPath));
 app.use('/config', express.static(configPath));
 
 // CORS headers
