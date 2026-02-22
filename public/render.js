@@ -16,12 +16,12 @@ function renderPage() {
       }
     }
 
-    // imagens
+    // imagens - only set if not already set in HTML
     if (window.IMAGENS) {
       const logo = document.getElementById('logo');
-      if (logo && IMAGENS.logo) logo.src = IMAGENS.logo;
+      if (logo && IMAGENS.logo && !logo.src) logo.src = IMAGENS.logo;
       const mainImage = document.getElementById('main-image');
-      if (mainImage && IMAGENS.main) mainImage.src = IMAGENS.main;
+      if (mainImage && IMAGENS.main && !mainImage.src) mainImage.src = IMAGENS.main;
     }
 
     // perguntas (FAQ)
