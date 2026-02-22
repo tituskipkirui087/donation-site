@@ -7,6 +7,21 @@
 }
 
 *{box-sizing:border-box}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Prevent images from reloading on scroll */
+#logo, #main-image, #image-text-01 {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
 html,body{height:100%}
 body{
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
