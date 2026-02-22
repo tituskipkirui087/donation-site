@@ -31,19 +31,42 @@
         }
         .faq-item {
             background: #f9fafb;
-            padding: 20px;
             border-radius: 10px;
             margin-bottom: 15px;
             border-left: 4px solid #2563eb;
+            overflow: hidden;
         }
         .faq-question {
             font-weight: 700;
             color: #1f2937;
-            margin-bottom: 10px;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 17px;
+            margin: 0;
+        }
+        .faq-question:hover {
+            background: #f3f4f6;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: #2563eb;
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
         }
         .faq-answer {
             color: #4b5563;
+            padding: 0 20px 20px 20px;
+            display: none;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
         }
         .back-link {
             display: inline-block;
@@ -77,84 +100,82 @@
     <div class="page-container">
         <div class="page-header">
             <h1>FAQ</h1>
-            <p>Frequently Asked Questions - Immanuel Children's Home</p>
+            <p>Frequently Asked Questions - Imani Children's Home</p>
         </div>
         
         <div class="page-content">
             <div class="faq-item">
                 <p class="faq-question">📍 Where is Imani Children's Home located?</p>
-                <p class="faq-answer">We are located in Kayole, a community in eastern Nairobi, Kenya. Kayole is home to many families facing economic challenges, and we serve the most vulnerable children in this area.</p>
+                <div class="faq-answer">We are located in Kayole, a community in eastern Nairobi, Kenya. Kayole is home to many families facing economic challenges, and we serve the most vulnerable children in this area.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">💰 Where does my donation go?</p>
-                <p class="faq-answer">Your donations go directly to caring for the children at Immanuel Children's Home. We use funds for food, education, healthcare, clothing, shelter, and daily necessities. We keep administrative costs minimal.</p>
+                <div class="faq-answer">Your donations go directly to caring for the children at Imani Children's Home. We use funds for food, education, healthcare, clothing, shelter, and daily necessities. We keep administrative costs minimal.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🔒 Is my donation secure?</p>
-                <p class="faq-answer">Yes! We use Paystack, a secure payment processor that handles all transactions. Your financial information is never stored on our servers. You can donate with confidence.</p>
+                <div class="faq-answer">Yes! We use Paystack, a secure payment processor that handles all transactions. Your financial information is never stored on our servers. You can donate with confidence.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">📝 Can I get a tax receipt?</p>
-                <p class="faq-answer">Yes, all donors receive a tax-deductible receipt via email within 24 hours of their donation. Please contact us for specific tax documentation for your country.</p>
+                <div class="faq-answer">Yes, all donors receive a tax-deductible receipt via email within 24 hours of their donation. Please contact us for specific tax documentation for your country.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🌍 Can I donate from anywhere in the world?</p>
-                <p class="faq-answer">Yes! We accept donations from most countries. Our payment processor supports multiple currencies, and your donation will be converted to Kenyan Shillings (KES) for our operations.</p>
+                <div class="faq-answer">Yes! We accept donations from most countries. Our payment processor supports multiple currencies, and your donation will be converted to Kenyan Shillings (KES) for our operations.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">💵 What amount should I donate?</p>
-                <p class="faq-answer">Any amount makes a difference! $25 provides food for a child for a month, $50 covers school supplies, $100 pays for medical checkups, and $200 sponsors a child for a month. Every contribution matters!</p>
+                <div class="faq-answer">Any amount makes a difference! $25 provides food for a child for a month, $50 covers school supplies, $100 pays for medical checkups, and $200 sponsors a child for a month. Every contribution matters!</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">👶 How many children do you care for?</p>
-                <p class="faq-answer">We currently care for over 50 children ranging from toddlers to teenagers. Each child receives love, care, education, and opportunities for a better future.</p>
+                <div class="faq-answer">We currently care for over 50 children ranging from toddlers to teenagers. Each child receives love, care, education, and opportunities for a better future.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🏫 Do the children go to school?</p>
-                <p class="faq-answer">Yes! Education is a priority. All school-aged children attend local schools. We provide school fees, uniforms, books, and other educational materials needed for their success.</p>
+                <div class="faq-answer">Yes! Education is a priority. All school-aged children attend local schools. We provide school fees, uniforms, books, and other educational materials needed for their success.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🏥 What healthcare do the children receive?</p>
-                <p class="faq-answer">We provide regular medical checkups, vaccinations, and treatment when needed. We work with local clinics and hospitals to ensure the children receive proper healthcare.</p>
+                <div class="faq-answer">We provide regular medical checkups, vaccinations, and treatment when needed. We work with local clinics and hospitals to ensure the children receive proper healthcare.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🤝 Can I sponsor a specific child?</p>
-                <p class="faq-answer">Yes! You can sponsor a child to cover their monthly expenses including food, education, healthcare, and clothing. Contact us to learn about sponsorship opportunities.</p>
+                <div class="faq-answer">Yes! You can sponsor a child to cover their monthly expenses including food, education, healthcare, and clothing. Contact us to learn about sponsorship opportunities.</div>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">🔄 Can I set up recurring donations?</p>
-                <p class="faq-answer">Yes! You can choose to make a one-time donation or set up monthly recurring donations. Monthly donors receive special updates on the children's progress.</p>
+                <div class="faq-answer">Yes! You can choose to make a one-time donation or set up monthly recurring donations. Monthly donors receive special updates on the children's progress.</div>
             </div>
 
-            <div class="faq-item">
-                <p class="faq-question">📸 Can I visit the children's home?</p>
-                <p class="faq-answer">We welcome visitors by appointment. If you'd like to visit Imani Children's Home in Kayole, please contact us in advance to arrange a convenient time.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">👥 Can I volunteer?</p>
-                <p class="faq-answer">Absolutely! We welcome volunteers with various skills, including teaching, healthcare, counseling, fundraising, and general assistance. Contact us to learn about volunteer opportunities.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">📊 How can I track my donation's impact?</p>
-                <p class="faq-answer">We send regular email updates to all donors with news about the children, photos, and information about how your donations are being used. Follow us on social media for real-time updates.</p>
-            </div>
-
-            <div class="faq-item">
-                <p class="faq-question">❓ What if I have more questions?</p>
-                <p class="faq-answer">We're here to help! Please reach out through our Contact page, and we'll get back to you within 24-48 hours.</p>
-            </div>
+            <script>
+                // FAQ Accordion functionality
+                const faqItems = document.querySelectorAll('.faq-item');
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+                    question.addEventListener('click', () => {
+                        // Close other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                });
+            </script>
 
             <a href="index.html" class="donate-btn">Donate Now</a>
 
