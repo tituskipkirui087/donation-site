@@ -9,8 +9,17 @@ const PORT = process.env.PORT || 10000;
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(process.cwd() + '/public'));
-app.use('/config', express.static(process.cwd() + '/config'));
+const basePath = path.resolve(__dirname);
+const rootPath = path.join(basePath, '..');
+const publicPath = path.join(rootPath, 'public');
+const configPath = path.join(rootPath, 'config');
+
+console.log('Server paths:', { basePath, rootPath, publicPath, configPath });
+console.log('Public exists:', fs.existsSync(publicPath));
+console.log('Config exists:', fs.existsSync(configPath));
+
+app.use(express.static(publicPath));
+app.use('/config', express.static(configPath));
 
 // CORS headers
 app.use((req, res, next) => {
