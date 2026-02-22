@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 10000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/config', express.static('config'));
 
 // CORS headers
 app.use((req, res, next) => {
@@ -116,9 +117,38 @@ app.post('/api/verify-payment', async (req, res) => {
     }
 });
 
+// Serve HTML pages
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'about.html'));
+});
+
+app.get('/how-to-help', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'how-to-help.html'));
+});
+
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'blog.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'contact.html'));
+});
+
+app.get('/testimonials', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'testimonials.html'));
+});
+
+app.get('/faq', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'faq.html'));
+});
+
 // Serve index.html for all other routes (SPA)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 // Start server
