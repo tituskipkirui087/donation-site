@@ -797,6 +797,17 @@
     <script src="./public/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Check if opened with donate=true parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('donate') === 'true') {
+          var modal = document.getElementById('modal-doacao');
+          if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            setTimeout(function() { modal.classList.add('active'); }, 10);
+          }
+        }
+
         // Show thank-you modal if returning from successful Paystack payment
         (function() {
           var urlParams = new URLSearchParams(window.location.search);
