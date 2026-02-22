@@ -20,7 +20,7 @@ body{
 .container{max-width:1150px;margin:0 auto;padding:24px}
 
 /* Header */
-header{background: #fff; border-bottom: 1px solid rgba(17,24,39,0.04)}
+header{background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); border-bottom: 1px solid rgba(17,24,39,0.04)}
 .header-content{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .logo img{height:36px;display:block;transition:transform 0.2s}
 .logo img:hover{transform:scale(1.05)}
