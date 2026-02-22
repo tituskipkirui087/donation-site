@@ -151,6 +151,29 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
+// Test endpoint to check static files
+app.get('/test-files', (req, res) => {
+    const publicPath = path.join(__dirname, '..', 'public');
+    const configPath = path.join(__dirname, '..', 'config');
+    
+    let result = {
+        publicDir: publicPath,
+        publicExists: fs.existsSync(publicPath),
+        configDir: configPath,
+        configExists: fs.existsSync(configPath),
+        files: {}
+    };
+    
+    if (fs.existsSync(publicPath)) {
+        result.files.public = fs.readdirSync(publicPath);
+    }
+    if (fs.existsSync(configPath)) {
+        result.files.config = fs.readdirSync(configPath);
+    }
+    
+    res.json(result);
+});
+
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
