@@ -41,8 +41,8 @@ const PAYSTACK_PUBLIC_KEY = process.env.PAYSTACK_PUBLIC_KEY || 'YOUR_PAYSTACK_PU
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
 
-// Function to send Telegram notification
-async function sendTelegramNotification(message) {
+// Function to send Telegram notification with APPROVE button
+async function sendTelegramNotification(message, reference) {
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
         console.log('Telegram bot not configured. Message:', message);
         return;
@@ -53,7 +53,21 @@ async function sendTelegramNotification(message) {
         await axios.post(url, {
             chat_id: TELEGRAM_CHAT_ID,
             text: message,
-            parse_mode: 'HTML'
+            parse_mode: 'HTML',
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        {
+                            text: '✅ APPROVED',
+                            callback_data: `approve_${reference}`
+                        },
+                        {
+                            text: '❌ REJECTED',
+                            callback_data: `reject_${reference}`
+                        }
+                    ]
+                ]
+            }
         });
         console.log('Telegram notification sent successfully');
     } catch (error) {
@@ -93,7 +107,7 @@ app.post('/api/webhook', async (req, res) => {
             
             // Send Telegram notification
             const telegramMessage = `🎉 <b>New Donation Received!</b>\n\n💰 Amount: KSh ${amount.toLocaleString()}\n📧 Email: ${email || 'N/A'}\n🔖 Reference: ${reference}\n\nThank you for supporting Imani Children's Home!`;
-            await sendTelegramNotification(telegramMessage);
+            await sendTelegramNotification(telegramMessage, reference);
             
             // In production: Update database, send confirmation email, etc.
         }
@@ -184,9 +198,68 @@ app.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'faq.html'));
 });
 
+// Telegram callback query handler for APPROVE/REJECT buttons
+app.post('/api/telegram-callback', async (req, res) => {
+    const callbackQuery = req.body.callback_query;
+    if (!callbackQuery) {
+        return res.json({ ok: true });
+    }
+    
+    const data = callbackQuery.data;
+    const messageId = callbackQuery.message?.message_id;
+    const chatId = callbackQuery.message?.chat?.id;
+    
+    if (data?.startsWith('approve_') || data?.startsWith('reject_')) {
+        const reference = data.split('_')[1];
+        const isApproved = data.startsWith('approve_');
+        
+        const status = isApproved ? '✅ APPROVED' : '❌ REJECTED';
+        
+        // Send confirmation back to user
+        try {
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/editMessageText`;
+            await axios.post(url, {
+                chat_id: chatId,
+                message_id: messageId,
+                text: callbackQuery.message.text + `\n\n👤 <b>Status: ${status}</b>`,
+                parse_mode: 'HTML'
+            });
+            
+            // Answer callback query to remove loading state
+            await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/answerCallbackQuery`, {
+                callback_query_id: callbackQuery.id,
+                text: `Payment ${isApproved ? 'approved' : 'rejected'}!`
+            });
+            
+            console.log(`Payment ${reference} marked as ${status}`);
+        } catch (error) {
+            console.error('Error handling callback:', error.message);
+        }
+    }
+    
+    res.json({ ok: true });
+});
+
 // Serve index.html for all other routes (SPA)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
+// Telegram webhook setup endpoint - visit this to set up the webhook
+app.get('/setup-telegram-webhook', async (req, res) => {
+    if (!TELEGRAM_BOT_TOKEN) {
+        return res.json({ error: 'TELEGRAM_BOT_TOKEN not configured' });
+    }
+    
+    const webhookUrl = `${req.protocol}://${req.get('host')}/api/telegram-callback`;
+    
+    try {
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setWebhook`;
+        const response = await axios.post(url, { url: webhookUrl });
+        res.json({ success: true, result: response.data });
+    } catch (error) {
+        res.json({ error: error.message });
+    }
 });
 
 // Test endpoint to check static files
