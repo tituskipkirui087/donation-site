@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     try { renderPage(); } catch (e) { console.warn('renderPage failed', e); }
   }
   
+  // Prevent full page refresh on link clicks for smoother navigation
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin)) {
+      e.preventDefault();
+      window.location.href = link.href;
+    }
+  });
+  
   // Wire up payment method buttons to launch Paystack with specific channel
   document.addEventListener("click", function(e) {
     const btn = e.target.closest(".pay-method-btn[data-channel]");
