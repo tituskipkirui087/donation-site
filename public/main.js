@@ -1,5 +1,23 @@
 // Minimal main.js placeholder
 document.addEventListener('DOMContentLoaded', function () {
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const mainNav = document.querySelector('.main-nav');
+  
+  if (hamburger && mainNav) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      mainNav.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
+        hamburger.classList.remove('active');
+        mainNav.classList.remove('active');
+      }
+    });
+  }
   // Keep global behavior safe if config scripts are missing
   if (typeof renderPage === 'function') {
     try { renderPage(); } catch (e) { console.warn('renderPage failed', e); }
