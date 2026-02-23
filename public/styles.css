@@ -87,7 +87,8 @@ header{background: #fff; border-bottom: 1px solid rgba(17,24,39,0.04)}
 
 /* Story text */
 .historia-texto{color:var(--cor-texto-claro);line-height:1.8}
-.historia-imagem img{max-width:100%;border-radius:8px;margin:18px 0}
+.historia-imagem{width:100%;display:flex;justify-content:center;margin:18px 0}
+.historia-imagem img{width:100%;max-width:760px;height:350px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px rgba(16,24,40,0.08);display:block}
 .cta-box{text-align:center;margin-top:16px}
 
 /* Ensure images are always visible and don't flash */
